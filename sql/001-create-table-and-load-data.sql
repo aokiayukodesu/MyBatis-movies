@@ -9,5 +9,4 @@ CREATE TABLE movies (
 
 INSERT INTO movies (name, releaseYear) VALUES ("アルマゲドン", 2000);
 INSERT INTO movies (name, releaseYear) VALUES ("トイ・ストーリー", 2000);
-INSERT INTO movies (name, releaseYear) VALUES ("ファイト・クラブ", 1999);
-INSERT INTO movies (name, releaseYear) VALUES ("セブン", 1996);
+
