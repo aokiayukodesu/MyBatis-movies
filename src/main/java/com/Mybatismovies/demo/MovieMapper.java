@@ -10,6 +10,6 @@ import java.util.Optional;
 
 @Mapper
 public interface MovieMapper {
-   @Select("SELECT * FROM movies where releaseYear = 2000")
-   List<Movie> findByReleaseYear();
+    @Select("SELECT * FROM movies where publishedYear = #{publishedYear}")
+    List<Movie> findByPublishedYear(String publishedYear);
 }

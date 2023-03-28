@@ -6,17 +6,16 @@ import java.time.Year;
 import java.util.List;
 
 @Service
-public class MovieServiceImpl implements MovieService{
-
+public class MovieServiceImpl implements MovieService {
     private MovieMapper movieMapper;
+
     public MovieServiceImpl(MovieMapper movieMapper) {
         this.movieMapper = movieMapper;
     }
 
-
     @Override
-    public List<Movie> findByReleaseYear() {
-        return null;
+    public List<Movie> findByPublishedYear(String publishedYear) {
+        return movieMapper.findByPublishedYear(publishedYear);
     }
 
     @Override
@@ -25,15 +24,10 @@ public class MovieServiceImpl implements MovieService{
     }
 
     @Override
-    public void create(String name,Year releaseYear) {
-
+    public void create(String name, Year publishedYear) {
     }
 
     @Override
-    public void update(int id, String name, Year releaseYear) throws Exception {
-
+    public void update(int id, String name, Year publishedYear) throws Exception {
     }
-
-    public List<Movie> movies() {
-        return movieMapper.findByReleaseYear();
-}}
+}

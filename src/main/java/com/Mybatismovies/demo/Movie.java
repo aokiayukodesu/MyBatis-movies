@@ -3,29 +3,28 @@ package com.Mybatismovies.demo;
 import java.time.Year;
 
 public class Movie {
-    private String name;
 
     private int id;
+    private String name;
 
-    private Year releaseYear;
+    private Year publishedYear;
 
-
-    public Movie(String name, int id, Year releaseYear) {
-        this.name = name;
+    //コンストラクタ()内の変数の順番がテーブルのデータと違うとエラーになるので気を付ける
+    public Movie(int id, String name, Year publishedYear) {
         this.id = id;
-        this.releaseYear = releaseYear;
+        this.name = name;
+        this.publishedYear = publishedYear;
     }
 
-    public Year getReleaseYear() {
-        return releaseYear;
+    public int getId() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
 
-    public int getId() {
-        return id;
+    public Year getPublishedYear() {
+        return publishedYear;
     }
 }
-

@@ -8,18 +8,15 @@ import java.util.List;
 
 @RestController
 public class MovieController {
+    private final MovieService movieService;
 
-    private final MovieServiceImpl movieService;
-
-    public MovieController(MovieServiceImpl movieService) {
+    public MovieController(MovieService movieService) {
         this.movieService = movieService;
     }
 
     @GetMapping("/movies")
-    public List<Movie> getMovies(@RequestParam ("published_year") String publishedYear) {
-        List<Movie> movies = movieService.findByReleaseYear();
-            return movies;
-        }
+    public List<Movie> getMovies(@RequestParam(name = "published_year", value = "published_year") String publishedYear) {
+        List<Movie> movies = movieService.findByPublishedYear(publishedYear);
+        return movies;
     }
-
-
+}
