@@ -9,7 +9,7 @@ public class Movie {
 
     private Year publishedYear;
 
-    //コンストラクタ()内の変数の順番がテーブルのデータと違うとエラーになるので気を付ける
+
     public Movie(int id, String name, Year publishedYear) {
         this.id = id;
         this.name = name;
@@ -27,4 +27,7 @@ public class Movie {
     public Year getPublishedYear() {
         return publishedYear;
     }
+
+
 }
+

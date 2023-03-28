@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 public class MovieController {
+
     private final MovieService movieService;
 
     public MovieController(MovieService movieService) {
