@@ -11,5 +11,4 @@ public interface MovieService {
     void create(String name, Year publishedYear);
 
     void update(int id, String name, Year publishedYear) throws Exception;
-
 }

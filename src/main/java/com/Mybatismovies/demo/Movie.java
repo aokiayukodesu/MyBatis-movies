@@ -9,7 +9,6 @@ public class Movie {
 
     private Year publishedYear;
 
-
     public Movie(int id, String name, Year publishedYear) {
         this.id = id;
         this.name = name;
@@ -27,7 +26,4 @@ public class Movie {
     public Year getPublishedYear() {
         return publishedYear;
     }
-
-
 }
-
