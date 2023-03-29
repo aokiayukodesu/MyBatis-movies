@@ -7,7 +7,7 @@ import java.util.List;
 
 @Service
 public class MovieServiceImpl implements MovieService {
-    private MovieMapper movieMapper;
+    private final MovieMapper movieMapper;
 
     public MovieServiceImpl(MovieMapper movieMapper) {
         this.movieMapper = movieMapper;
